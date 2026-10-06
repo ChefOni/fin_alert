@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Google_Sans, Google_Sans_Code, Literata } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { FeedbackWidget } from "./feedback-widget";
 
@@ -58,6 +59,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </footer>
 
         <FeedbackWidget />
+        <Analytics />
       </body>
     </html>
   );
