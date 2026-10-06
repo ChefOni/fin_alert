@@ -10,7 +10,9 @@ export const maxDuration = 60;
 
 function authorized(req: Request): boolean {
   const secret = process.env.CRON_SECRET;
-  if (!secret) return true; // dev open; set CRON_SECRET in prod
+  // Dev open for local testing; fail closed in production so an unset
+  // CRON_SECRET never exposes the poll/webhook endpoint publicly.
+  if (!secret) return process.env.NODE_ENV !== "production";
   const url = new URL(req.url);
   return (
     req.headers.get("authorization") === `Bearer ${secret}` ||
