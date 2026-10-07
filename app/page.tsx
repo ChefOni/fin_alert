@@ -3,9 +3,9 @@ import { PROVIDERS } from "@/lib/providers";
 import { ProviderLogo } from "./provider-logo";
 
 export const metadata = {
-  title: "NaijaPay Health — know when Nigeria's payment rails go down",
+  title: "Fin Alert — know when Nigeria's fintech rails go down",
   description:
-    "NaijaPay Health tracks the live health of Nigerian payment providers — Paystack, Flutterwave, Mono, Interswitch, Moniepoint and more — and pushes signed failover webhooks to your checkout.",
+    "Fin Alert tracks the live health of the fintech rails Nigerian teams build on — payment processors like Paystack, Flutterwave, Mono, Interswitch, Moniepoint, plus other payment instruments like KYC/identity checks, cards and remittances — and pushes signed failover webhooks to your stack.",
 };
 
 const STEPS: { n: string; title: string; body: string; soon?: boolean }[] = [
@@ -63,10 +63,12 @@ export default function Landing() {
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">Nigeria-only uptime signal</p>
           <h1 className="mt-5 text-balance font-medium text-3xl leading-[1.05] sm:text-5xl">
-            Know when Nigeria&apos;s payment rails go down before your customers do.
+            Know when Nigeria&apos;s fintech rails go down before your customers do.
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-            NaijaPay Health watches the payment infrastructure Nigerian fintech teams build on in Nigeria.
+            Fin Alert watches the rails Nigerian fintech teams build on — payment processors like Paystack and
+            Flutterwave, plus other payment instruments like KYC checks, cards and remittances — so one outage
+            doesn&apos;t stall your flow.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <Link href="/status" className="rounded-full bg-foreground px-6 py-3 text-sm font-semibold text-background transition-opacity hover:opacity-85">
@@ -108,12 +110,13 @@ export default function Landing() {
       <section className="flex min-h-[100svh] flex-col justify-center border-t border-border py-20 sm:py-28">
         <div className="max-w-2xl">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">Why this exists</p>
-          <h2 className="mt-4 text-3xl sm:text-4xl">One failed rail can stall every checkout you run.</h2>
+          <h2 className="mt-4 text-3xl sm:text-4xl">One failed rail can stall every transaction you run.</h2>
           <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-            Nigerian payment providers go down independently of each other, and the tools that would warn you
-            are scattered across a dozen status pages — some of which don&apos;t exist. By the time support
-            tickets arrive, you&apos;ve already lost conversions. NaijaPay Health gives your team a single,
-            Nigeria-scoped signal and a way to act on it automatically.
+            Payment rails go down independently of each other, and it&apos;s not just processors: KYC checks, card
+            schemes, remittances and wallets degrade too — and the tools that would warn you are scattered across
+            a dozen status pages, some of which don&apos;t even exist. By the time support tickets arrive,
+            you&apos;ve already lost conversions. Fin Alert gives your team a single, Nigeria-scoped signal and a
+            way to act on it automatically.
           </p>
         </div>
 
@@ -153,10 +156,11 @@ export default function Landing() {
       <section id="coverage" className="flex min-h-[100svh] scroll-mt-24 flex-col justify-center border-t border-border py-20 sm:py-28">
         <div className="max-w-2xl">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">Coverage</p>
-          <h2 className="mt-4 text-3xl sm:text-4xl">The providers we watch.</h2>
+          <h2 className="mt-4 text-3xl sm:text-4xl">The rails we watch.</h2>
           <p className="mt-5 text-base leading-relaxed text-muted-foreground">
             Where a provider publishes a status page we read it directly. Where they don&apos;t, we fall back to
             reachability probes and secondary signals — clearly labelled so you know how strong the signal is.
+            That&apos;s payment processors today; KYC, card and remittance rails are next on the board.
           </p>
         </div>
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

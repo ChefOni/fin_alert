@@ -10,9 +10,9 @@ const literata = Literata({ variable: "--font-literata", subsets: ["latin"], sty
 const googleSansCode = Google_Sans_Code({ variable: "--font-google-sans-code", subsets: ["latin"], adjustFontFallback: false });
 
 export const metadata: Metadata = {
-  title: "NaijaPay Health — live status of Nigerian payment infrastructure",
+  title: "Fin Alert — live status of Nigerian fintech infrastructure",
   description:
-    "One place for Nigerian fintech teams to see live health of Paystack, Flutterwave, Mono, Interswitch, Moniepoint and more, with failover webhooks.",
+    "One place for Nigerian fintech teams to see live health of the rails they build on — payment processors like Paystack and Flutterwave, plus other payment instruments like KYC/identity checks, cards and remittances — with failover webhooks.",
 };
 
 function BrandMark() {
@@ -34,7 +34,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-6 py-3.5">
             <Link href="/" className="flex items-center gap-2.5">
               <BrandMark />
-              <span className="font-serif text-lg leading-none">NaijaPay Health</span>
+              <span className="font-serif text-lg leading-none">Fin Alert</span>
             </Link>
             <nav className="flex items-center gap-6 text-sm font-medium text-muted-foreground">
               <Link href="/" className="transition-colors hover:text-foreground">Overview</Link>
@@ -53,7 +53,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
 
         <footer className="border-t border-border">
           <div className="mx-auto flex w-full max-w-6xl flex-col gap-1 px-6 py-8 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-            <span>NaijaPay Health — independent, Nigeria-focused uptime signal.</span>
+            <span>Fin Alert — independent, Nigeria-focused uptime signal.</span>
             <span>Not affiliated with any listed provider. Signal, not a guarantee.</span>
           </div>
         </footer>
